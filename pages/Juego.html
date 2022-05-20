@@ -7,35 +7,36 @@
     <link rel="stylesheet" href="../static/css/style.css">
     <title>Juego del Ahorcado</title>
   </head>
-  <body>
+  <body onload="hangmanGame()">
     <div id="wrapper">
       <header>
         <object data="../static/img/Alura.svg"></object>
+         
       </header>
       <div class="container">
         <div class="oportunities">
-          <div class="rightFoot">
-            <img src="../static/img/Rectangle.svg" alt="">
+          <div class="rightFoot" id="body0" style="display:none;">
+            <img src="../static/img/Rectangle.svg" alt="rightFoot">
           </div>
-         <div class="leftFoot">
-           <img src="../static/img/Rectangle.svg" alt="">
+         <div class="leftFoot" id="body1" style="display:none;" >
+           <img src="../static/img/Rectangle.svg" alt="leftFoot">
          </div>
-          <div class="rightHand">
-            <img src="../static/img/Rectangle.svg" alt="">
+          <div class="rightHand" id="body2" style="display:none;">
+            <img src="../static/img/Rectangle.svg" alt="rightHand">
           </div>
-          <div class="leftHand">
-            <img src="../static/img/Rectangle.svg" alt="">
+          <div class="leftHand" id="body3" style="display:none;">
+            <img src="../static/img/Rectangle.svg" alt="leftHand">
           </div>
-          <div class="body">
+          <div class="body" id="body4" style="display:none;">
             <img src="../static/img/Rectangle.svg" alt="body">
           </div>
-          <div class="head">
+          <div class="head" id="body5" style="display:none;">
             <img src="../static/img/Elipse.svg" alt="head">
           </div>
-          <div class="base4">
+          <div class="base4" id="body6">
             <img src="../static/img/oportunities/base.svg" alt="">
           </div>
-          <div class="base3">
+          <div class="base3" id="body7">
             <img src="../static/img/oportunities/base.svg" alt="">
           </div>
           <div class="base2">
@@ -45,25 +46,23 @@
             <img src="../static/img/oportunities/base.svg" alt="base">
           </div>
         </div>
-        <div class="keyboard">
-          <div id="word">
-            <p id="word1">a</p>
-            <p id="word2">b</p>
-            <p id="word3">c</p>
-            <p id="word4">d</p>
-            <p id="word5">e</p>
+        <div>
+          <div class="keyboard" id="originalWord"></div>           
+          <div class="keyboard" id="Word"></div>
+          <div class="keyboard" id="Oportunities">
+            <img src="../static/img/Rectangle.svg" alt="rectangle" class="keyboard letter" id="img0" style="display: none;">
+            <img src="../static/img/Rectangle.svg" alt="rectangle" class="keyboard letter" id="img1" style="display: none;">
+            <img src="../static/img/Rectangle.svg" alt="rectangle" class="keyboard letter" id="img2" style="display: none;">
+            <img src="../static/img/Rectangle.svg" alt="rectangle" class="keyboard letter" id="img3" style="display: none;">
+            <img src="../static/img/Rectangle.svg" alt="rectangle" class="keyboard letter" id="img4" style="display: none;">
+            <img src="../static/img/Rectangle.svg" alt="rectangle" class="keyboard letter" id="img5" style="display: none;">
+            <img src="../static/img/Rectangle.svg" alt="rectangle" class="keyboard letter" id="img6" style="display: none;">
+            <img src="../static/img/Rectangle.svg" alt="rectangle" class="keyboard letter" id="img7" style="display: none;">
           </div>
-          <div id="letter">
-            <img id="letter1" style="display: none;" src="../static/img/Rectangle.svg" alt="">
-            <img id="letter1" src="../static/img/Rectangle.svg" alt="">
-            <img id="letter1" src="../static/img/Rectangle.svg" alt="">
-            <img id="letter1" src="../static/img/Rectangle.svg" alt="">
-            <img id="letter1" src="../static/img/Rectangle.svg" alt="">
-            <img id="letter1" src="../static/img/Rectangle.svg" alt="">
-          </div>          
+          <div class="keyboard" id="usedletter"></div>
         </div>
         <div class="frame4">
-          <a href="./Juego.html" id="JuegoNuevo">Juego Nuevo</a>
+          <a href="./Juego.html" id="JuegoNuevo" onclick="initGame()">Juego Nuevo</a>
           <a href="../index.html" id="btnDesistir">Desistir</a>
         </div>
       </div>  
@@ -72,4 +71,5 @@
       <h2>Creado por Miguel Alejandro</h2>  
     </footer>
   </body>
+  <script src="../static/js/game.js"></script>
 </html>

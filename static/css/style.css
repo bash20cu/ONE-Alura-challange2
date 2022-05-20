@@ -230,7 +230,9 @@ h1{
 }
 
 .oportunities{
-    width: 294px;
+    display: flex;
+    align-items: center;
+    width: 100%;
     height: 360px;
     left: 573px;
     top: 148px;
@@ -282,8 +284,6 @@ h1{
     height: 63px;
     left: 800px;
     top: 195px;
-    display: none;
-    
 }
 .oportunities .body img{
     position: absolute;
@@ -293,7 +293,6 @@ h1{
     top: 252px;
     /* Dark blue/dark-blue-300 */
     background: #0A3871;
-    display: none;
 }
 .oportunities .leftHand img{
     position: absolute;
@@ -307,7 +306,6 @@ h1{
     background: #0A3871;
     border-radius: 8px;
     transform: rotate(30deg);
-    display: none;
 }
 .oportunities .rightHand img{
     position: absolute;
@@ -321,7 +319,6 @@ h1{
     background: #0A3871;
     border-radius: 8px;
     transform: rotate(130deg);
-    display: none;
 }
 .oportunities .leftFoot img{
     position: absolute;
@@ -335,7 +332,6 @@ h1{
     background: #0A3871;
     border-radius: 8px;
     transform: rotate(30deg);
-    display: none;
 }
 .oportunities .rightFoot img{
     position: absolute;
@@ -347,47 +343,75 @@ h1{
     background: #0A3871;
     border-radius: 8px;
     transform: rotate(130deg);
-    display: none;
 }
 
 .keyboard{
     /* Auto layout */
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;    
-    margin:3px;
-    padding: 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
     gap: 3px;    
-    width: 250px;
-    height: 152px;
-    left: 488px;
-    top: 626px;
+    width: 80%;
+    text-transform: uppercase;
+    font-size: 32px;
+    margin: 10px 25px 0px 0px;
+   
 }
-.keyboard #word{
-    /* Word */
+.keyboard .p {
+
     display: flex;
-    flex-direction: row;   
-    align-items: flex-start;
-    /* Inside auto layout */
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+   
+
+    text-transform: uppercase;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px 25px 0px 0px;
+}
+.keyboard img {    
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60px;
+    height: 4px;
+    left: 0px;
+    margin: 0px 30px 10px 0px;
+}
+/******
+.keyboard .p {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+   
+
     text-transform: uppercase;
     font-size: 42px;
     padding: 10px;
-}
-.keyboard p{
-    justify-content: space-between;
+    margin: 10px 35px 0px 0px;
 }
 
-.keyboard #letter {    
-    /* Letter */
+
+
+.keyboard img {    
+
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 80px;
     height: 4px;
     left: 0px;
-    
-
+    margin: 0px 30px 10px 0px;
 }
+**/
 
 .frame4{
     display: flex;
